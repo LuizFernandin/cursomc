@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import br.com.luiz.cursomc.domain.Categoria;
 import br.com.luiz.cursomc.domain.Cliente;
 import br.com.luiz.cursomc.dto.ClienteDTO;
 import br.com.luiz.cursomc.dto.ClienteNewDTO;
@@ -38,8 +37,8 @@ public class ClienteResource {
 	
 	@RequestMapping(method=RequestMethod.POST)
 	public ResponseEntity<Void> insert(@Valid @RequestBody ClienteNewDTO objDto) {
-		Categoria obj = service.fromDTO(objDto);
-		obj = service.inserir(obj);
+		Cliente obj = service.fromDTO(objDto);
+		obj = service.insert(obj);
  		URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
  				.path("/{id}").buildAndExpand(obj.getId()).toUri();
  		return ResponseEntity.created(uri).build();
