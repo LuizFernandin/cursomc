@@ -1,4 +1,4 @@
-package br.com.luiz.cursomc.resources;
+ package br.com.luiz.cursomc.resources;
 
 import java.net.URI;
 
@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import br.com.luiz.cursomc.domain.Categoria;
 import br.com.luiz.cursomc.domain.Pedido;
-import br.com.luiz.cursomc.dto.CategoriaDTO;
 import br.com.luiz.cursomc.services.PedidoService;
 
 @RestController
